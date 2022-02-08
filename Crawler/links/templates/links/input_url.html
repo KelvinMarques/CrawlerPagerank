@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="content-section">
+        <form action="Crawler"method="POST" data-ajax="false">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">URL Crawler</legend>
+                <input type="url" name="Url">
+                {% comment %} <input type="hidden" name="token" value={{token}}> {% endcomment %}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Reset</button>
+            </div>
+            <div>
+                
+            </div>
+        </form>
+    </div>
+{% endblock content %}

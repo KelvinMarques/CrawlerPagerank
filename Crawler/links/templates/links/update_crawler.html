@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="content-section">
+        <h1>{{ Url|length }} links encontrados</h1>
+        <ul> 
+            {% for i in Url %}
+                <li>{{i}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}
